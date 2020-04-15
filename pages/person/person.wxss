@@ -1,0 +1,43 @@
+/* pages/person/person.wxss */
+.selfInfor{
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  align-items: center;
+  margin-top: 30px
+}
+
+.selfInfor image{
+  width: 30%;
+  height: 80px
+}
+.selfInfor  .selfInfor_content{
+  width: 60%;
+  margin-left: 10%
+}
+
+.selfInfor_content{
+  text-align: center
+}
+
+.selfInfor_content .selfInforCon_title{
+  margin-top: 10px;
+}
+
+.selfInforCon_title text{
+  margin-left: 10px
+}
+
+/* 第二部分 */
+.selfCharacter{
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.selfCharacter_item scroll-view{
+     height: 300px;
+     background-color: reed
+}
+

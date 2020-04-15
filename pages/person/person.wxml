@@ -1,0 +1,36 @@
+<!--pages/person/person.wxml-->
+<!-- 第一部分 -->
+<view class="selfInfor">
+  <image src="../../assets/person/13.jpg"></image>
+  <view class="selfInfor_content">
+    <view class="selfInforCon_title">123</view>
+    <view class="selfInforCon_title">
+      <h2>我是那个大学</h2>
+      <text>xxx专业</text>
+    </view>
+  </view>
+</view>
+
+<view class="selfCharacter">
+  <text>您的印象中我最符合下列哪些优点</text>
+  <view class="selfCharacter_item">
+    <scroll-view scroll-y="true">
+      <view id="demo1" class="scroll-view-item demo-text-1" style="height:800px">
+
+        <checkbox-group>
+          <label class="checkbox" wx:for="{{items}}" wx:key="first">
+            <checkbox value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}
+          </label>
+        </checkbox-group>
+      </view>
+    </scroll-view>
+  </view>
+</view>
+
+  <van-checkbox-group value="{{ items }}" bind:change="onChange">
+  <van-button type="primary">
+    <van-checkbox value="{{item.name}}" checked="{{item.checked}}">
+      <van-icon name="chat" color="{{ checked ? activeIcon : inactiveIcon }}" />
+      {{item.value}}</van-checkbox>
+  </van-button>
+  </van-checkbox-group>
