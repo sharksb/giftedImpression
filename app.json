@@ -1,0 +1,33 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/about/about",
+    "pages/test/test"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "互联网金融",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text": "日志"
+      },
+      {
+        "pagePath": "pages/test/test",
+        "text": "测试"
+      }
+    ],
+    "color": "#000",
+    "selectedColor": "#87CEEB"
+  },
+  "sitemapLocation": "sitemap90.json"
+}
