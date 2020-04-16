@@ -11,15 +11,25 @@
   </view>
 </view>
 
+<!-- 第二部分 -->
 <view class="selfCharacter">
   <text>您的印象中我最符合下列哪些优点</text>
   <view class="selfCharacter_item">
     <scroll-view scroll-y="true">
       <view id="demo1" class="scroll-view-item demo-text-1" style="height:800px">
-
-        <checkbox-group>
-          <label class="checkbox" wx:for="{{items}}" wx:key="first">
-            <checkbox value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}
+        <checkbox-group class="radio-group" bindchange="checkboxChange">
+          <label class="checkbox selfCharacterItem_button" wx:for="{{items}}" wx:key="unique">
+            <view class="selfCharacterItemBut_box">
+              <checkbox value="{{item.value}}" hidden='true' />
+              <block wx:if="{{item.checked}}">
+                <van-icon name="good-job-o" size="25px" />
+              </block>
+              <block wx:else>
+                <van-icon name="good-job-o" color="red" size="25px" />
+              </block>
+              <text class="selfCharacterItemBut_val">{{item.name}}</text>
+              <text class="selfCharacterItemBut_num">{{item.num}}</text>
+            </view>
           </label>
         </checkbox-group>
       </view>
@@ -27,10 +37,35 @@
   </view>
 </view>
 
-  <van-checkbox-group value="{{ items }}" bind:change="onChange">
-  <van-button type="primary">
-    <van-checkbox value="{{item.name}}" checked="{{item.checked}}">
-      <van-icon name="chat" color="{{ checked ? activeIcon : inactiveIcon }}" />
-      {{item.value}}</van-checkbox>
-  </van-button>
-  </van-checkbox-group>
+<!-- 第三部分 -->
+<view class="grayZone">
+</view>
+
+<view class="friendEvaluation">
+  <view class="friendAvater">
+    <image src="../../assets/person/person.png"></image>
+    <image src="../../assets/person/person.png"></image>
+    <image src="../../assets/person/person.png"></image>
+    <image src="../../assets/person/person.png"></image>
+    <image src="../../assets/person/person.png"></image>
+  </view>
+  <view class="friendNumber">
+    <text>已有13位朋友助力</text>
+  </view>
+</view>
+
+
+  <view class="friendMessage">
+      <text>您为好友的评价将生成\n</text>
+      <text>《优势能力报告》\n</text>
+      <text>帮助朋友在求职路上一帆风顺</text>
+  </view>
+
+  <view class="friendButton">
+    <button class="buildReportBut">免费创建报告</button>
+    <button class="boostNextBut">助力下一个</button>
+  </view>
+
+
+<view>
+</view>

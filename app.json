@@ -3,7 +3,8 @@
     "pages/home/home",
     "pages/about/about",
     "pages/test/test",
-    "pages/person/person"
+    "pages/person/person",
+    "pages/friend/friend"
   ],
   "window": {
     "navigationBarBackgroundColor": "#000",
@@ -29,6 +30,10 @@
       {
         "pagePath": "pages/person/person",
         "text": "个人评价"
+      },
+      {
+        "pagePath": "pages/friend/friend",
+        "text": "好友助力"
       }
     ],
     "color": "#000",
@@ -39,6 +44,8 @@
     "van-button": "@vant/weapp/button/index",
     "van-checkbox": "@vant/weapp/checkbox/index",
     "van-checkbox-group": "@vant/weapp/checkbox-group/index",
-    "van-icon": "@vant/weapp/icon/index"
+    "van-icon": "@vant/weapp/icon/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index"
   }
 }

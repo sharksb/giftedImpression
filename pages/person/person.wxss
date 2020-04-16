@@ -1,43 +1,156 @@
 /* pages/person/person.wxss */
-.selfInfor{
+
+.selfInfor {
   display: flex;
   width: 80%;
   margin: 0 auto;
   align-items: center;
-  margin-top: 30px
+  margin-top: 30px;
 }
 
-.selfInfor image{
+.selfInfor image {
   width: 30%;
-  height: 80px
+  height: 80px;
 }
-.selfInfor  .selfInfor_content{
+
+.selfInfor  .selfInfor_content {
   width: 60%;
-  margin-left: 10%
+  margin-left: 10%;
 }
 
-.selfInfor_content{
-  text-align: center
+.selfInfor_content {
+  text-align: center;
 }
 
-.selfInfor_content .selfInforCon_title{
+.selfInfor_content .selfInforCon_title {
   margin-top: 10px;
 }
 
-.selfInforCon_title text{
-  margin-left: 10px
+.selfInforCon_title text {
+  margin-left: 10px;
 }
 
 /* 第二部分 */
-.selfCharacter{
+
+.selfCharacter {
   width: 80%;
   margin: 0 auto;
   margin-top: 20px;
   text-align: center;
 }
 
-.selfCharacter_item scroll-view{
-     height: 300px;
-     background-color: reed
+.selfCharacter_item {
+  margin-top: 30px;
 }
 
+.selfCharacter_item scroll-view {
+  height: 300px;
+  background-color: reed;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+.selfCharacterItem_button {
+  width: 45%;
+  margin-bottom: 20px;
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+  background-color: orange;
+  border-radius: 15px;
+}
+
+.radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.selfCharacterItemBut_box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.selfCharacterItemBut_box van-icon {
+  width: 30%;
+}
+
+.selfCharacterItemBut_box van-icon view {
+  top: -2px;
+}
+
+.selfCharacterItemBut_val {
+  width: 45%;
+  text-align: center;
+}
+
+.selfCharacterItemBut_num {
+  width: 25%;
+}
+
+/* 第三部分 */
+
+.grayZone {
+  height: 1px;
+  width: 80%;
+  margin: 0 auto;
+  background-color: gray;
+}
+
+.friendEvaluation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.friendAvater {
+  width: 55%;
+}
+
+.friendEvaluation image {
+  width: 40px;
+  height: 40px;
+  margin-left: -15px;
+}
+
+.friendEvaluation image:first-child {
+  margin-left: 0px;
+}
+
+.friendNumber {
+  width: 45%;
+  text-align: right
+}
+
+/* 第四部分 */
+.friendMessage{
+   text-align: center;
+   margin: 0 auto;
+   margin-top: 20px;
+}
+.friendButton{
+  display: flex;
+  margin-top: 20px
+}
+
+.friendButton  button{
+  width: 50%;
+  color:white;
+  font-size: 20px;
+  border-radius: 0px;
+}
+
+.buildReportBut{
+  background-color: #36CFC9;
+  
+}
+
+.boostNextBut{
+  background-color: #DABF0D;
+}
