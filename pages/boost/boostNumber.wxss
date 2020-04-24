@@ -1,0 +1,27 @@
+.friendEvaluation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.friendAvater {
+  width: 55%;
+}
+
+.friendEvaluation image {
+  width: 40px;
+  height: 40px;
+  margin-left: -15px;
+}
+
+.friendEvaluation image:first-child {
+  margin-left: 0px;
+}
+
+.friendNumber {
+  width: 45%;
+  text-align: right
+}

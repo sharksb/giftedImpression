@@ -1,0 +1,5 @@
+<!--components/my_barchart/factorBar.wxml-->
+<view class="friendGraph">
+    <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ecbar }}"></ec-canvas>
+</view>
+

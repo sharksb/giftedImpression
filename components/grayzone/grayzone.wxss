@@ -1,0 +1,6 @@
+/* components/grayzone/grayzone.wxss */
+/* 灰色底边 */
+.grayzone {
+  height: 10px;
+  background-color: #eee;
+}

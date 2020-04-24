@@ -1,0 +1,26 @@
+<!--pages/friend/friend.wxml-->
+<view class="firendBoost_title">
+  好友报告
+</view>
+
+
+
+<!-- 第一部分 -->
+<block wx:for="{{students}}">
+  <view class="firendBoost">
+    <view class="friendAvater">
+      <image src="{{item.avater}}"></image>
+    </view>
+    <view class="friendIntro">
+      <text class="friendintro_name">{{item.studentName}}\n</text>
+      <text class="friendintro_infro">{{item.schoolName}}  专业</text>
+    </view>
+  </view>
+  <evaluationRanking frienddata="{{item.datas}}" frienddataFactor="{{item.dataFactor}}"></evaluationRanking>
+  <view class="grayline"></view>
+  <view class="friendlike">
+    <van-icon name="good-job-o" size="25px" />
+    <button plain class="friendlikeButton">帮她助力</button>
+  </view>
+  <view class="grayzone"></view>
+</block>

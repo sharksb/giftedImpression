@@ -1,0 +1,10 @@
+<!--pages/myWelfare/myWelfare.wxml-->
+<view class="weboxlfare_box" wx:for="{{welfareInfor}}" wx:key="myWelfare">
+   <image src="{{item.imgUrl}}"></image>
+   <view class="weboxlfarebox_content">
+      <view class="weboxlfareboxCon_title">
+        <text>{{item.title}}</text>
+      </view>
+      <button type="plain" bindtap="obtainWalfare">一键获取</button>
+   </view>
+</view>

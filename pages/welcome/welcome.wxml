@@ -1,0 +1,50 @@
+<!--pages/index/index.wxml-->
+<view id="j_page">
+<view class="homeLogo">
+  <image src="../../assets/index/logo.png"></image>
+</view>
+
+<view class="home_infor">
+  <text class="home_name">优才印象\n</text>
+  <text class="home_intro">基于熟人评价数据的个人优势能力分析报告</text>
+</view>
+
+<view class="home_hr">
+  <text class="homeHr_title">让HR,5秒记住你\n</text>
+  <view class="homeHr_content">
+    <text>HR筛选简历一般只有5秒，能否让HR更快发现你的优势，OUT or 初面，转瞬即逝。\n</text>
+    <text>《优势报告》基于熟人评价、运用360度测评技术，图表化展示求职者优势能力，让HR快速记住你。</text>
+  </view>
+  <image class="reportOne" src="../../assets/index/img1.jpg"></image>
+</view>
+
+<view class="home_hr">
+  <text class="homeHr_title">个人优势看得见\n</text>
+  <view class="homeHr_content">
+    <text>个人报告详细记录了好友对你的正面评价，我们做成图表后求职者可以粘贴在简历中，让朋友为你背书，效果更好！\n</text>
+  </view>
+  <image class="reportTwo" src="../../assets/index/img2.jpg"></image>
+</view>
+
+<view class="formInformation">
+  <view class="formInfor_title">填写基本信息</view>
+  <form bindsubmit="formSubmit">
+    <view class="section">
+      <input name="userName" focus="{{isfocus}}" placeholder="姓名" />
+    </view>
+    <view class="section">
+      <input type="number"  name="userMoible" placeholder="手机" bindblur="inputPnoneNumer"/>
+    </view>
+    <view class="section">
+      <input name="userSchool" placeholder="学校" />
+    </view>
+    <view class="section">
+      <input name="userProfessional" placeholder="专业" />
+    </view>
+    <view class="btn-area">
+    <button formType="submit" class="buildReport">免费创建报告</button>
+  </view>
+  </form>
+</view>
+</view>
+<van-dialog id="van-dialog" />

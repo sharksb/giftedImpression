@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "ec-canvas": "../../ec-canvas/ec-canvas",
+    "evaluationRanking": "../../components/my_barchart/factorBar"
+  }
+}

@@ -82,6 +82,62 @@
 					"id": -1,
 					"name": "pages/person/person",
 					"pathName": "pages/person/person",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/friend/friend",
+					"pathName": "pages/friend/friend",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/index",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/myWelfare/myWelfare",
+					"pathName": "pages/myWelfare/myWelfare",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/myReport/myReport",
+					"pathName": "pages/myReport/myReport",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/friendReport/friendReport",
+					"pathName": "pages/friendReport/friendReport",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/friendReport/friendReport",
+					"pathName": "pages/friendReport/friendReport",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/personalEvaluation/personalEvaluation",
+					"pathName": "pages/personalEvaluation/personalEvaluation",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "欢迎页",
+					"pathName": "pages/welcome/welcome",
 					"scene": null
 				}
 			]

@@ -1,0 +1,83 @@
+/* pages/friend/friend.wxss */
+
+.grayzone {
+  height: 10px;
+  background-color: #eee;
+}
+
+.firendBoost_title {
+  padding: 64px 0px 14px 21px;
+}
+
+.firendBoost {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 25px;
+}
+
+.firendAvater {
+  width: 25%;
+}
+
+.friendAvater image {
+  width: 50px;
+  height: 50px;
+}
+
+.friendIntro {
+  width: 75%;
+}
+
+.friendintro_name {
+  color: #ff8000;
+}
+
+
+.grayline {
+  height: 1px;
+}
+
+.friendlike {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.friendlike van-icon {
+  width: 20%;
+  margin-right: 37%;
+}
+
+.friendlikeButton {
+  width: 40%;
+  height: 31px;
+  line-height: 31px;
+  border-radius: 18px;
+}
+
+.friendGraph {
+  width: 80%;
+  margin: 0 auto;
+  height: 200px;
+  margin-bottom: 20px;
+  margin-top: 15px;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+ec-canvas {
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,196 @@
+@import '../boost/boostNumber.wxss';
+
+/* title==start */
+
+.title {
+  width: 85%;
+  margin: 30rpx auto 15rpx;
+}
+
+.little_title {
+  width: 65%;
+  display: flex;
+  align-items: center;
+  background-color: #fff3e1;
+  font-size: 12px;
+  margin-left: 20rpx;
+  padding: 10rpx 10rpx;
+  border-radius: 10rpx;
+}
+
+.van-icon {
+  margin-right: 20rpx;
+}
+
+/* title==end */
+
+/* echart==start */
+
+.capabilityModel {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-sizing: border-box;
+}
+
+ec-canvas {
+  width: 80%;
+  height: 80%;
+}
+
+/* echart==start */
+
+/* introduce==start */
+
+#reportTitle {
+  text-align: center;
+}
+
+#reportTitle image {
+  width: 150rpx;
+  height: 150rpx;
+  margin-bottom: 20rpx;
+}
+
+#reportTitle text {
+  padding-bottom: 20rpx;
+}
+
+#reportTitle  button {
+  width: 300rpx;
+  height: 66rpx;
+  line-height: 66rpx;
+  font-size: 32rpx;
+  color: #fff;
+  background-color: #e65ab1;
+  border-radius: 30rpx;
+  margin-top: 22rpx;
+}
+
+/* introduce==end */
+
+/* third==start */
+
+.endorsementModel {
+  width: 90%;
+  margin: 46rpx auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.endorsementModel view {
+  font-size: 14px;
+  text-align: center;
+}
+
+.endorsement_title {
+  margin-bottom: 10rpx;
+}
+
+.endorsement_score {
+  margin-bottom: 10rpx;
+}
+
+.endorsement_percentage {
+  font-size: 60rpx;
+  font-family: PingFangSC-regular;
+}
+
+.endorsement_content{
+  color: red;
+}
+
+/* third==end */
+
+.reportButton {
+  width: 300rpx;
+  height: 66rpx;
+  line-height: 66rpx;
+  font-size: 32rpx;
+  color: #fff;
+  background-color: #e65ab1;
+  border-radius: 30rpx;
+  text-align: center;
+}
+
+#attentionButton {
+  width: 64px;
+  height: 32px;
+  line-height: 32px;
+  border-radius: 18px;
+  color: rgba(90, 89, 88, 1);
+  font-size: 14px;
+}
+
+#reportNotice {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 16px;
+  color: #9a9696;
+  margin-top: 10px;
+}
+
+#reportSecond {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 600rpx;
+}
+
+#reportThird {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 500rpx;
+}
+
+/* 标签安按钮 */
+
+.reportSpan {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 80rpx;
+}
+
+.reportSpan button {
+  font-size: 14rpx;
+  width: 115rpx;
+  margin-bottom: 30rpx;
+}
+
+.friendReview {
+  margin-top: 30rpx;
+}
+
+.wantBoost {
+  width: 168rpx;
+  height: 72rpx;
+  font-size: 14px;
+  color: #fff;
+  background-color: #5677fc;
+  box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.24);
+  margin-top: 30rpx;
+}
+
+.reportButton {
+  display: flex;
+  margin-top: 40rpx;
+}
+
+.reportButton button {
+  width: 50%;
+  color: #fff;
+  border-radius: 0px;
+}
+
+.inviteOther {
+  background-color: #36cfc9;
+}
+
+.exportReport {
+  background-color: #dabf0d;
+}

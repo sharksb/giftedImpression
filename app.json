@@ -1,40 +1,40 @@
 {
   "pages": [
-    "pages/home/home",
+    "pages/myWelfare/myWelfare",
+    "pages/myReport/myReport",
     "pages/about/about",
-    "pages/test/test",
-    "pages/person/person",
-    "pages/friend/friend"
+    "pages/personalEvaluation/personalEvaluation",
+    "pages/friendReport/friendReport",
+    "pages/welcome/welcome"
   ],
   "window": {
     "navigationBarBackgroundColor": "#000",
     "navigationBarTextStyle": "white",
-    "navigationBarTitleText": "互联网金融",
+    "navigationBarTitleText": "优才印象",
     "backgroundColor": "#eeeeee",
     "backgroundTextStyle": "light"
   },
   "tabBar": {
     "list": [
       {
-        "pagePath": "pages/home/home",
-        "text": "首页"
+        "pagePath": "pages/myWelfare/myWelfare",
+        "text": "福利",
+        "iconPath": "assets/toolbar/welfare.png",
+        "selectedIconPath":"assets/toolbar/selectedWelfare.png"
       },
       {
-        "pagePath": "pages/about/about",
-        "text": "日志"
+        "pagePath": "pages/myReport/myReport",
+        "text": "我的报告",
+        "iconPath": "assets/toolbar/myReport.png",
+        "selectedIconPath": "assets/toolbar/selectedmyReport.png"
       },
       {
-        "pagePath": "pages/test/test",
-        "text": "测试"
-      },
-      {
-        "pagePath": "pages/person/person",
-        "text": "个人评价"
-      },
-      {
-        "pagePath": "pages/friend/friend",
-        "text": "好友助力"
+        "pagePath": "pages/friendReport/friendReport",
+        "text": "更多报告",
+        "iconPath": "assets/toolbar/moreReport.png",
+        "selectedIconPath": "assets/toolbar/selectedmyReport.png"
       }
+      
     ],
     "color": "#000",
     "selectedColor": "#87CEEB"
@@ -46,6 +46,8 @@
     "van-checkbox-group": "@vant/weapp/checkbox-group/index",
     "van-icon": "@vant/weapp/icon/index",
     "van-cell": "@vant/weapp/cell/index",
-    "van-cell-group": "@vant/weapp/cell-group/index"
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-dialog": "@vant/weapp/dialog/index",
+    "grayzone": "components/grayzone/grayzone"
   }
 }

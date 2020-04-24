@@ -1,0 +1,84 @@
+<!--pages/test/test.wxml-->
+<view id="reportFirst">
+  <view id="reportTitle">
+    <image src="../../assets/person/person.png"></image>
+    <view class="reportIntro">
+      <text>柴业伟\n</text>
+      <text>中南林业科技大学\n</text>
+    </view>
+    <van-button>我的优势报告</van-button>
+  </view>
+</view>
+<van-divider />
+
+
+<!-- second==start -->
+<view class="title">
+  <text>综合能力分析</text>
+</view>
+<view class="little_title">
+  <van-icon name="aim" /> 此图表依据好友印象数据为分析基础
+</view>
+<view id="reportSecond">
+
+  <!-- 综合能力分析 -->
+  <view class="capabilityModel">
+    <ec-canvas id="mychart-dom-pie" canvas-id="mychart-pie" ec="{{ ecpie }}"></ec-canvas>
+  </view>
+</view>
+<!-- second==end -->
+
+<grayzone></grayzone>
+
+
+<!-- third==start -->
+<view class="title">
+  <text>认可度最高的标签</text>
+</view>
+<view class="little_title">
+  <van-icon name="chart-trending-o" /> 提取五个认可度最高的好友印象
+</view>
+
+<view class="endorsementModel">
+
+  <view wx:for="{{circleData}}" class="endorsement_content" style="color:{{item.color}}">
+    <view class="endorsement_title">{{item.factor}}</view>
+    <view class="endorsement_score">{{item.evaluationCount}}/{{item.count}}</view>
+    <van-circle value="{{ item.evaluationCount/item.count*100 }}" layer-color="#eeeeee" stroke-width="10" color="{{item.color}}">
+      <text class="endorsement_percentage">{{item.evaluationCount/item.count*100}}%</text> </van-circle>
+  </view>
+
+</view>
+<!-- third==start -->
+
+<grayzone></grayzone>
+
+<!-- fourth==start -->
+<view class="title">
+  <text>好友印象细分标签</text>
+</view>
+
+<view class="friendsImpression">
+    <factorBar xdata="{{friedIImpress.xdatas}}" ydataFactor="{{friedIImpress.ydataFactor}}" span="{{friedIImpress.span}}" subspan="{{friedIImpress.subspan}}"></factorBar>
+</view>
+<!-- fourth==end -->
+<grayzone></grayzone>
+<view class="friendEvaluation">
+  <view class="friendAvater">
+    <block wx:for="{{friendAvater}}" wx:key="index">
+      <image src="{{item}}"></image>
+    </block>
+  </view>
+  <view class="friendNumber">
+    <text>已有13位朋友助力</text>
+  </view>
+</view>
+
+<view class="text-center friendReview">主动给其他人助力将获得额外能力加成哦！</view>
+<button class="wantBoost">我要助力</button>
+
+
+<view class="reportButton">
+  <button class="inviteOther">邀请别人评价</button>
+  <button class="exportReport">导出报告</button>
+</view>
