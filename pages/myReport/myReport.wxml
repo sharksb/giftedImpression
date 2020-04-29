@@ -11,7 +11,16 @@
 </view>
 <van-divider />
 
+<view wx:if="{{false}}">
+    <view class="noReport">
+    <view class="noReport_word">
+     <text>还没有人\n给你评印象哦</text>
+    </view>
+    </view>
+       <button class="noReport_button">邀请好友为你助力</button>
+</view>
 
+<block wx:else>
 <!-- second==start -->
 <view class="title">
   <text>综合能力分析</text>
@@ -39,16 +48,50 @@
   <van-icon name="chart-trending-o" /> 提取五个认可度最高的好友印象
 </view>
 
+
 <view class="endorsementModel">
 
-  <view wx:for="{{circleData}}" class="endorsement_content" style="color:{{item.color}}">
-    <view class="endorsement_title">{{item.factor}}</view>
-    <view class="endorsement_score">{{item.evaluationCount}}/{{item.count}}</view>
-    <van-circle value="{{ item.evaluationCount/item.count*100 }}" layer-color="#eeeeee" stroke-width="10" color="{{item.color}}">
-      <text class="endorsement_percentage">{{item.evaluationCount/item.count*100}}%</text> </van-circle>
+  <view class="endorsement_content" style="color:#37A2DA">
+    <view class="endorsement_title">{{circleData[0].factor}}</view>
+    <view class="endorsement_score">{{circleData[0].evaluationCount}}/{{circleData[0].count}}</view>
+    <van-circle value="{{ circleData[0].evaluationCount/circleData[0].count*100 }}" layer-color="#eeeeee" stroke-width="10" color="#37A2DA">
+      <text class="endorsement_percentage">{{circleData[0].evaluationCount/circleData[0].count*100}}%</text> </van-circle>
   </view>
-
+   <view class="endorsement_content" style="color:#32C5E9">
+    <view class="endorsement_title">{{circleData[1].factor}}</view>
+    <view class="endorsement_score">{{circleData[1].evaluationCount}}/{{circleData[1].count}}</view>
+    <van-circle value="{{ circleData[1].evaluationCount/circleData[1].count*100 }}" layer-color="#eeeeee" stroke-width="10" color="#32C5E9">
+      <text class="endorsement_percentage">{{circleData[1].evaluationCount/circleData[1].count*100}}%</text> </van-circle>
+  </view>
+   <view class="endorsement_content" style="color:#67E0E3">
+    <view class="endorsement_title">{{circleData[2].factor}}</view>
+    <view class="endorsement_score">{{circleData[2].evaluationCount}}/{{circleData[2].count}}</view>
+    <van-circle value="{{ circleData[2].evaluationCount/circleData[2].count*100 }}" layer-color="#eeeeee" stroke-width="10" color="#67E0E3">
+      <text class="endorsement_percentage">{{circleData[2].evaluationCount/circleData[2].count*100}}%</text> </van-circle>
+  </view>
 </view>
+  <van-divider class="divider"/>
+  <view class="endorsementModel">
+   <view class="endorsement_content" style="color:#91F2DE">
+    <view class="endorsement_title">{{circleData[3].factor}}</view>
+    <view class="endorsement_score">{{circleData[3].evaluationCount}}/{{circleData[3].count}}</view>
+    <van-circle value="{{ circleData[0].evaluationCount/circleData[3].count*100 }}" layer-color="#eeeeee" stroke-width="10" color="#91F2DE">
+      <text class="endorsement_percentage">{{circleData[3].evaluationCount/circleData[3].count*100}}%</text> </van-circle>
+  </view>
+   <view class="endorsement_content" style="color:#FFDB5C">
+    <view class="endorsement_title">{{circleData[4].factor}}</view>
+    <view class="endorsement_score">{{circleData[4].evaluationCount}}/{{circleData[4].count}}</view>
+    <van-circle value="{{ circleData[4].evaluationCount/circleData[4].count*100 }}" layer-color="#eeeeee" stroke-width="10" color="#FFDB5C">
+      <text class="endorsement_percentage">{{circleData[4].evaluationCount/circleData[4].count*100}}%</text> </van-circle>
+  </view>
+  </view>
+   <!-- <view class="endorsement_content" style="color:#FF9F7F">
+    <view class="endorsement_title">{{circleData[5].factor}}</view>
+    <view class="endorsement_score">{{circleData[5].evaluationCount}}/{{circleData[5].count}}</view>
+    <van-circle value="{{ circleData[5].evaluationCount/circleData[5].count*100 }}" layer-color="#eeeeee" stroke-width="10" color="#FF9F7F">
+      <text class="endorsement_percentage">{{circleData[5].evaluationCount/circleData[5].count*100}}%</text> </van-circle>
+  </view> -->
+
 <!-- third==start -->
 
 <grayzone></grayzone>
@@ -59,10 +102,23 @@
 </view>
 
 <view class="friendsImpression">
-    <factorBar xdata="{{friedIImpress.xdatas}}" ydataFactor="{{friedIImpress.ydataFactor}}" span="{{friedIImpress.span}}" subspan="{{friedIImpress.subspan}}"></factorBar>
+
+    <block  wx:for="{{friedIImpress}}">
+ 
+      <factorBar xdata="{{item.xdatas}}" ydataFactor="{{item.ydataFactor}}" span="{{item.span}}" subspan="{{item.subspan}}" barcolor="{{item.color}}">
+      </factorBar>
+    </block>
+
+
 </view>
 <!-- fourth==end -->
 <grayzone></grayzone>
+
+<!-- fifth==start -->
+<view class="qrcode">
+  <image src='data:image/png;base64,{{src2}}'></image>
+  <view>扫描报告可查看详情</view>
+</view>
 <view class="friendEvaluation">
   <view class="friendAvater">
     <block wx:for="{{friendAvater}}" wx:key="index">
@@ -75,10 +131,16 @@
 </view>
 
 <view class="text-center friendReview">主动给其他人助力将获得额外能力加成哦！</view>
-<button class="wantBoost">我要助力</button>
+<!-- fifth==end -->
 
+<grayzone></grayzone>
 
 <view class="reportButton">
-  <button class="inviteOther">邀请别人评价</button>
-  <button class="exportReport">导出报告</button>
+  <view class="inviteOther">
+    <button>邀请好友</button>
+  </view>
+  <view class="exportReport">
+    <button>正版授权<van-icon name="bag"/></button>
+  </view>
 </view>
+</block>

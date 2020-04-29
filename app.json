@@ -17,16 +17,16 @@
   "tabBar": {
     "list": [
       {
-        "pagePath": "pages/myWelfare/myWelfare",
-        "text": "福利",
-        "iconPath": "assets/toolbar/welfare.png",
-        "selectedIconPath":"assets/toolbar/selectedWelfare.png"
-      },
-      {
         "pagePath": "pages/myReport/myReport",
         "text": "我的报告",
         "iconPath": "assets/toolbar/myReport.png",
         "selectedIconPath": "assets/toolbar/selectedmyReport.png"
+      },
+      {
+        "pagePath": "pages/myWelfare/myWelfare",
+        "text": "福利",
+        "iconPath": "assets/toolbar/welfare.png",
+        "selectedIconPath":"assets/toolbar/selectedWelfare.png"
       },
       {
         "pagePath": "pages/friendReport/friendReport",

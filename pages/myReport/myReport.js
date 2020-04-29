@@ -21,15 +21,18 @@ var pieData = [{
 }, {
   value: 38,
   name: '上海'
-}]
+  }, {
+    value: 15,
+    name: '湖州'
+  }
+]
 
 // 认可度最高的标签
 var circleData = [
   {
-    factor:"争强好胜",
-    count:10,
-    evaluationCount:8,
-    color:'',
+    factor: "争强好胜",
+    count: 10,
+    evaluationCount: 8,
   },
   {
     factor: "好奇心宝宝",
@@ -41,37 +44,67 @@ var circleData = [
     factor: "踏实稳重",
     count: 10,
     evaluationCount: 6,
-    color: '',
   },
   {
     factor: "争强好胜",
     count: 10,
     evaluationCount: 6,
-    color: '',
+
   },
   {
     factor: "好奇心宝宝",
     count: 10,
     evaluationCount: 4,
-    color: '',
   },
   {
     factor: "争强好胜",
     count: 10,
     evaluationCount: 6,
-    color: '',
   }
 ]
 
 // 好友印象细分标签
 
 // 评价因子数值
-var friedIImpress = {
-  span:"人格魅力",
-  subspan:"Charisma",
-  xdatas: [5, 20, 36, 10, 10, 20],
-  ydataFactor: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"]
-}
+var friedIImpress = [
+  {
+    span: "人格魅力",
+    subspan: "Charisma",
+    xdatas: [5, 15, 20, 10, 10, 20],
+    ydataFactor: ["衬衫衬衫衬衫", "羊毛衫羊毛衫", "雪纺衫雪纺衫", "裤子", "高跟鞋", "袜子"],
+  },
+  {
+    span: "争强好胜",
+    subspan: "Charisma",
+    xdatas: [18, 18, 5, 7, 7, 7],
+    ydataFactor: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"],
+  },
+
+  {
+    span: "争强好胜",
+    subspan: "Charisma",
+    xdatas: [18, 18, 5, 7, 7, 7],
+    ydataFactor: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"],
+  },
+  {
+    span: "争强好胜",
+    subspan: "Charisma",
+    xdatas: [18, 18, 5, 7, 7, 7],
+    ydataFactor: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"],
+  },
+  {
+    span: "争强好胜",
+    subspan: "Charisma",
+    xdatas: [18, 18, 5, 7, 7, 7],
+    ydataFactor: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"],
+  },
+  {
+    span: "争强好胜",
+    subspan: "Charisma",
+    xdatas: [18, 18, 5, 7, 7, 7],
+    ydataFactor: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"],
+  },
+]
 
 
 
@@ -80,6 +113,20 @@ function pieChart(chart, pieData) {
   var option = {
     backgroundColor: "#ffffff",
     color: colors,
+    graphic: [{ //环形图中间添加文字
+      type: 'text', //通过不同top值可以设置上下显示
+      left: 'center',
+      top: '45%',
+      style: {
+        text: '优才印象' + '\n' + '测评',
+        textAlign: 'center',
+        fill: 'blue', //文字的颜色
+        width: 30,
+        height: 30,
+        fontSize: 14,
+        fontFamily: "Microsoft YaHei"
+      }
+    }],
     series: [{
       radius: ['35%', '60%'],
       type: 'pie',
@@ -122,11 +169,14 @@ Page({
       lazyLoad: true
     },
 
+    src2:'',
+    hasInfo:true
+
   },
 
 
 
-// 综合分析能力数据设置
+  // 综合分析能力数据设置
   getOneOPtion() {
     this.setData({
       pieData: pieData
@@ -161,25 +211,57 @@ Page({
   },
 
   // 颜色设置
-  changeColor(){
+  changeColor() {
     let circleData = this.data.circleData;
-    console.log(circleData)
+    let friedIImpress = this.data.friedIImpress
+
     let index = null
-    for (index in circleData){
+    let index1 = null
+    for (index in circleData) {
       circleData[index].color = colors[index]
-      console.log(circleData[index].color)
+   
     }
+    for (index1 in friedIImpress) {
+      friedIImpress[index1].color = colors[index1]
+    }
+    
     this.setData({
-      circleData: circleData
+      circleData: circleData,
+      friedIImpress: friedIImpress
     })
-    console.log(this.data.circleData)
+   
   },
 
   onLoad() {
 
     this.OneComponent = this.selectComponent('#mychart-dom-pie');
     this.getOneOPtion();
-    this.changeColor()
+    this.changeColor();
+
+
+    var that = this;
+    wx.request({
+      //注意：下面的access_token值可以不可以直接复制使用，需要自己请求获取
+      url: 'https://api.weixin.qq.com/wxa/getwxacodeunlimit?access_token=32_04ViIDLQDmTQbMoKpcmEt-DDPnyK7JHHwp027nf4bj-TLDY9eD8D_CRu9n6isLou9Veh6qOeQdiy_6Ppog8s2tOkBe91yg4RveOQN_dBrKQJoIgMOcO-BmFwMOUnVnmUMSFA3JudLJ0SaIhiYBHfAJAPSY',
+      data: {
+        scene: '000',
+        page: ""  //这里按照需求设置值和参数   
+      },
+      method: "POST",
+      responseType: 'arraybuffer',  //设置响应类型
+      success(res) {
+        console.log(res)
+        var src2 = wx.arrayBufferToBase64(res.data);  //对数据进行转换操作
+        that.setData({
+          src2: src2
+        })
+      },
+      fail(e) {
+        console.log(e)
+      }
+    })
+
+
   }
 
 })

@@ -8,11 +8,18 @@ let welfareInfor=[{
 
 Page({
   data: {
-    welfareInfor: welfareInfor
+    welfareInfor: welfareInfor,
+    src2:''
   },
 
   // 获取福利
   obtainWalfare(){
     console.log("在这里获取福利")
+  },
+
+  onLoad(){
+  
+
+
   }
 })
