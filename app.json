@@ -5,7 +5,8 @@
     "pages/about/about",
     "pages/personalEvaluation/personalEvaluation",
     "pages/friendReport/friendReport",
-    "pages/welcome/welcome"
+    "pages/welcome/welcome",
+    "pages/sharePage/sharePage"
   ],
   "window": {
     "navigationBarBackgroundColor": "#000",
@@ -26,7 +27,7 @@
         "pagePath": "pages/myWelfare/myWelfare",
         "text": "福利",
         "iconPath": "assets/toolbar/welfare.png",
-        "selectedIconPath":"assets/toolbar/selectedWelfare.png"
+        "selectedIconPath": "assets/toolbar/selectedWelfare.png"
       },
       {
         "pagePath": "pages/friendReport/friendReport",
@@ -34,7 +35,6 @@
         "iconPath": "assets/toolbar/moreReport.png",
         "selectedIconPath": "assets/toolbar/selectedmyReport.png"
       }
-      
     ],
     "color": "#000",
     "selectedColor": "#87CEEB"
@@ -48,6 +48,7 @@
     "van-cell": "@vant/weapp/cell/index",
     "van-cell-group": "@vant/weapp/cell-group/index",
     "van-dialog": "@vant/weapp/dialog/index",
+    "van-divider": "@vant/weapp/divider/index",
     "grayzone": "components/grayzone/grayzone"
   }
 }

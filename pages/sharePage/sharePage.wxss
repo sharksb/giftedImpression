@@ -1,0 +1,162 @@
+/* pages/sharePage/sharePage.wxss */
+
+.first {
+  width: 100%;
+  height: 488rpx;
+  margin-bottom: 38rpx;
+}
+
+.first image {
+  width: 100%;
+  height: 100%;
+}
+
+.borderbox {
+  width: 97%;
+  margin: 8rpx auto;
+  border-radius: 14rpx;
+  border: 1px solid #bbb;
+}
+
+.second_box {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.secbox_left {
+  display: flex;
+  align-items: center;
+}
+
+.second_box image {
+  width: 120rpx;
+  height: 120rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  margin-right: 20rpx;
+}
+
+.secbox_right {
+  font-size: 20px;
+  color: #eb2d2d;
+}
+
+/*  */
+
+.third_box {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 36rpx;
+}
+
+.third_title {
+  text-align: center;
+  font-size: 28rpx;
+  margin: 24rpx auto;
+}
+
+.third_title text {
+  font-size: 18px;
+  color: #eb2d2d;
+}
+
+.van-progress {
+  border-radius: 66rpx !important;
+}
+
+.third_button button {
+  width: 80%;
+  height: 81rpx;
+  line-height: 81rpx;
+  margin: 38rpx auto auto;
+  display: block;
+  background-color: #e408a8;
+  color: white;
+  border-radius: 64rpx;
+}
+
+.third_note {
+  font-size: 12px;
+  color: #101010;
+}
+
+/*  */
+
+.fourth_box {
+  width: 80%;
+  margin: 30rpx auto auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.fourthcon_box {
+  width: 20%;
+  text-align: center
+}
+
+.fourthcon_title{
+  width: 68%;
+  margin: 0 auto;
+  font-size: 14px;
+  color: #101010;
+  border:1px solid #bbb;
+  border-radius: 16rpx;
+}
+
+.fourthcon_button{
+  width: 100%;
+  height: 56rpx;
+  border-radius: 64rpx;
+  font-size: 24rpx;
+  padding: 0;
+}
+
+/*  */
+.fifth_box {
+  width: 90%;
+  margin: 46rpx auto auto;
+  text-align: center;
+  padding-bottom: 30rpx;
+}
+
+.fifthbox_title {
+  font-size: 28rpx;
+  color: #101010;
+}
+
+.fifthbbox_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.fifthbbox_titlel {
+  display: flex;
+  align-items: center;
+}
+
+.fifthbbox_titlel image {
+  width: 62rpx;
+  height: 62rpx;
+  margin-right: 30rpx;
+}
+
+.fifthbbox_titler {
+  font-size: 28rpx;
+  color: #B0ABAB;
+}
+
+.fifthbbox_content{
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+
+.fifthbbox_content view {
+  width: 33.3333%;
+  font-size: 12px;
+  margin-top: 10rpx;
+}

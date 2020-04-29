@@ -1,0 +1,58 @@
+<!--pages/sharePage/sharePage.wxml-->
+<!-- first -->
+<view class="first">
+  <image src="../../assets/share/share.png"></image>
+</view>
+
+<!-- second -->
+<view class="borderbox">
+  <view class="second_box">
+    <view class="secbox_left">
+      <image src="{{personInfo.avater}}"></image>
+      <text>我是{{personInfo.name}}</text>
+    </view>
+    <text class="secbox_right">感谢帮我助力！</text>
+  </view>
+</view>
+
+<!-- third -->
+<view class="borderbox">
+  <view class="third_box">
+    <view class="third_title">已邀
+      <text>{{personInfo.friedboost}}</text>人助力，仅差{{unprogress}}% 免费领</view>
+    <van-progress percentage="{{progress*100}}" stroke-width="18" show-pivot="{{false}}" />
+    <van-button class="third_button">为好友评价，助力求职礼包</van-button>
+    <text class="third_note">为好友点评五个印象，助力他获得更好求职机会</text>
+  </view>
+</view>
+
+<!-- fourth -->
+<view class="fourth_box">
+  <view class="fourthcon_box" wx:for="{{weflares}}">
+    <view class="fourthcon_title">{{item.title}}</view>
+      <button class="fourthcon_button" style="background-color:{{item.status?'#E98DEB':'#E8DD20'}}">{{item.status?'已领取':'未领取'}}</button>
+  </view>
+
+</view>
+
+<!-- fifth -->
+<view class="fifth_box">
+  <text class="fifthbox_title">好友评价</text>
+  <block wx:for="{{friendEvaluations}}" wx:for-item="friEvaluation" wx:key="index">
+    <van-divider />
+    <view class="fifthbox_box">
+      <view class="fifthbbox_title">
+        <view class="fifthbbox_titlel">
+          <image src="{{friEvaluation.friendAvater}}"></image>
+          <text>{{friEvaluation.friendName}}</text>
+        </view>
+        <text class="fifthbbox_titler">{{friEvaluation.time}}</text>
+      </view>
+
+      <view class="fifthbbox_content">
+        <view wx:for="{{friEvaluation.evaluations}}" wx:key="index">{{item}}</view>
+      </view>
+
+    </view>
+  </block>
+</view>

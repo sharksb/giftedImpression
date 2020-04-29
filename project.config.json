@@ -138,6 +138,13 @@
 					"id": -1,
 					"name": "欢迎页",
 					"pathName": "pages/welcome/welcome",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "sharePage",
+					"pathName": "pages/sharePage/sharePage",
 					"scene": null
 				}
 			]
