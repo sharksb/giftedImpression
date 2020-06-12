@@ -160,3 +160,42 @@
   font-size: 12px;
   margin-top: 10rpx;
 }
+
+/*  */
+.sixth_box{
+  margin: 20rpx auto;
+  display: flex;
+  justify-content: space-between
+}
+
+.sixthbox_notice {
+  width: 55rpx;
+  height: 55rpx;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #E8DD20;
+}
+
+.sixthbox_notice image{
+   width: 100%;
+   height: 100%;
+}
+
+.notice_box {
+  width: 62%;
+}
+
+.free_button{
+  width: 35%;
+}
+.free_button button {
+  height: 64rpx;
+  border-radius: 38rpx;
+  color: white;
+  background-color: #F31ADF
+}
+
+.van-notice-bar{
+  border-radius: 38rpx;
+  height: 64rpx !important;
+}

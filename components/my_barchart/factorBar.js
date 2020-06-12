@@ -24,6 +24,10 @@ Component({
       type: String,
       value: ''
     },
+    nameid:{
+      type: String,
+      value: ''
+    }
   },
 
   /**
@@ -47,7 +51,7 @@ Component({
     },
 
     init_one(xdata, ydataFactor, span, subspan, barcolor) { //初始化第一个图表
-
+      console.log(this.oneComponent)
       this.oneComponent.init((canvas, width, height) => {
         let chart = echarts.init(canvas, null, {
           width: width,
@@ -57,8 +61,7 @@ Component({
       
        this.chart = chart;
         return chart;
-      });
-      this.save()    
+      }); 
     },
     barChart(chart, xdata, ydataFactor, span, subspan, barcolor) {
       var dataOPtion = [];
@@ -131,39 +134,14 @@ Component({
       }
       chart.setOption(option);
     },
-    save() {
-      const ecComponent = this.selectComponent('#mychart-dom-bar');
-
-      // 先保存图片到临时的本地文件，然后存入系统相册
-      ecComponent.canvasToTempFilePath({
-        fileType: 'jpg',
-        success: res => {
-          console.log("tempFilePath:", res.tempFilePath)
-          this.setData({
-            canvasSaveimg: res.tempFilePath
-          })
-          console.log(this.data.canvasSaveimg)
-          // 存入系统相册
-          // wx.saveImageToPhotosAlbum({
-          //   filePath: res.tempFilePath || '',
-          //   success: res => {
-          //     console.log("success", res)
-          //   },
-          //   fail: res => {
-          //     console.log("fail", res)
-          //   }
-          // })
-        },
-        fail: res => console.log(res)
-      });
-    }
     
   },
    
 
   ready () {
-    this.oneComponent = this.selectComponent('#mychart-dom-bar'); 
-      // this.getOneOption();
+    this.oneComponent = this.selectComponent('#nameid'); 
+    console.log(JSON.stringify('#' + this.data.nameid))
+
     this.init_one(this.data.xdata, this.data.ydataFactor, this.data.span, this.data.subspan, this.data.barcolor);
     
   }

@@ -1,0 +1,44 @@
+<!--pages/yctalent/yctalent.wxml-->
+<view class="container">
+  <view class="first">
+    <view class="talentTitle">
+      优才人才库
+    </view>
+    <view class="talentSubTitle">连接3000+企业人才库，助力企业挖掘优秀人才</view>
+
+    <view class="talentMiddleTitle">至少获得一次奖学金</view>
+    <view class="talentMiddleSubTitle">连接3000+企业人才库，助力企业挖掘优秀人才</view>
+
+    <view class="talentMiddleTitle">好友评价不低于15人</view>
+    <view class="talentMiddleSubTitle">{{isApply?'情商是团队协作必不可少的能力':'人际关系是团队协作必不可少的能力'}}</view>
+  </view>
+
+  <block wx:if="{{isApply}}">
+    <button class="afterApply">您已提交申请</button>
+  </block>
+ <block wx:else>
+  <view class="second">
+    <view class="second_title">请将证明资料进行上传</view>
+    <view class="second_notice">（如有社团经历、竞赛获奖、500强实习履历均可上传）</view>
+
+
+    <view class="second_imgage">
+      <view class="second_upload">
+        <van-uploader file-list="{{ fileList }}" bind:after-read="afterRead" preview-image="{{false}}">
+          <van-button icon="photo" class="uploadBut">上传图片</van-button>
+        </van-uploader>
+        <view class="secondupload_text">仅支持图片类型</view>
+      </view>
+
+      <view class="second_showimage">
+        <block wx:for="{{fileList}}">
+          <image src="{{item}}"></image>
+        </block>
+      </view>
+    </view>
+    <button class="second_button" bindtap="apply">申请入驻人才库</button>
+  </view>
+</block>
+
+</view>
+<van-toast id="van-toast" />

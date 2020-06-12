@@ -6,7 +6,10 @@
     "pages/personalEvaluation/personalEvaluation",
     "pages/friendReport/friendReport",
     "pages/welcome/welcome",
-    "pages/sharePage/sharePage"
+    "pages/sharePage/sharePage",
+    "pages/yctalent/yctalent",
+    "pages/mylabel/mylabel",
+    "pages/guanjianci/guanjianci"
   ],
   "window": {
     "navigationBarBackgroundColor": "#000",
@@ -18,20 +21,20 @@
   "tabBar": {
     "list": [
       {
-        "pagePath": "pages/myReport/myReport",
-        "text": "我的报告",
-        "iconPath": "assets/toolbar/myReport.png",
-        "selectedIconPath": "assets/toolbar/selectedmyReport.png"
-      },
-      {
         "pagePath": "pages/myWelfare/myWelfare",
         "text": "福利",
         "iconPath": "assets/toolbar/welfare.png",
         "selectedIconPath": "assets/toolbar/selectedWelfare.png"
       },
       {
-        "pagePath": "pages/friendReport/friendReport",
-        "text": "更多报告",
+        "pagePath": "pages/myReport/myReport",
+        "text": "我的报告",
+        "iconPath": "assets/toolbar/myReport.png",
+        "selectedIconPath": "assets/toolbar/selectedmyReport.png"
+      },
+      {
+        "pagePath": "pages/yctalent/yctalent",
+        "text": "优才人才库",
         "iconPath": "assets/toolbar/moreReport.png",
         "selectedIconPath": "assets/toolbar/selectedmyReport.png"
       }

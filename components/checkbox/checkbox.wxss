@@ -1,0 +1,38 @@
+/* components/checkbox/checkbox.wxss */
+/* pages/mylabel/mylabel.wxss */
+.mylabel_content {
+  display: flex;
+  /* justify-content: space-between; */
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.mylabel_content label {
+  width: 33.3333333333%
+}
+
+.mylabel_box {
+  flex: 1;
+  width: 90%;
+  margin: 0 auto;
+  height: 70rpx;
+  line-height: 70rpx;
+  text-align: center;
+  background-color: #F5F5F5;
+  margin-bottom: 10rpx;
+  border-radius: 10rpx;
+  font-size: 26rpx;
+  color: #757575;
+  border: 1px solid rgba(0, 0, 0, 0)
+}
+
+checkbox{
+  width: 100%;
+  height: 100%
+}
+
+.checkedbox {
+  color: #39BFBF;
+  border: 1px solid #39BFBF;
+}

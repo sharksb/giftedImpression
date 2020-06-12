@@ -1,0 +1,61 @@
+#container{
+  width: 95%;
+  margin: auto;
+  margin-bottom: 20px;
+}
+#articleTitle{
+  font-size: 18px;
+}
+#articleGZH{
+  font-size: 14px;
+  color: green;
+}
+#articleTime{
+  margin-top: 10px;
+  margin-left: 20px;
+  font-size: 12px;
+  color: green;
+}
+#articleBox{
+  margin-top: 30px;
+  width: 300px;
+  height: 80px;
+  background-color: #4864a5;
+  color: white;
+  padding-top: 10px;
+}
+#articleRG{
+  font-size: 10px;
+  padding-left: 30px;
+  padding-top: 10px;
+}
+.articleYC{
+  padding-left: 30px;
+}
+#articleContent{  
+  margin-top: 8px;
+}
+#articleZK{
+  margin-left: 165px;
+  color: green;
+}
+.articleMargin-30{
+  margin-top: 30px;
+}
+.articleMargin-20{
+  margin-top: 20px;
+}
+.articleWhite{
+  color: white;
+}
+#articleWrite{
+  height: 50px;
+  color: green;
+  background-color: #f1f1f1;
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 25px;
+}
+#articleReader{
+  color: #d0d0d0;
+}

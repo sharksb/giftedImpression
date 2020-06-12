@@ -20,7 +20,7 @@ var friendEvaluations = [{
 var personInfo = {
   name:"xxx",
   avater:'../../assets/person/person.png',
-  friedboost:50
+  friedboost:310 //助力人数
 }
 
 
@@ -35,6 +35,7 @@ Page({
     progress: 0,
     unprogress: 0,
     personInfo: personInfo,
+    notice:'足协杯战线连续第2年上演广州德比战，上赛季半决赛上恒大以两回合5-3的总比分淘汰富力。',
     weflares: [
       {
         title: "能力报告",
@@ -69,17 +70,17 @@ Page({
         weflares[i].status = true;
       }
       this.computePercentage((persons - 6),15-6)
-    } else if (persons >= 15 && persons < 45) {
+    } else if (persons >= 15 && persons < 199) {
       for (let i = 0; i < 2; i++) {
         weflares[i].status = true;
       }
-      this.computePercentage((persons - 15),45-15)
-    } else if (persons >= 45 && persons < 99) {
+      this.computePercentage((persons - 15),199-15)
+    } else if (persons >= 199 && persons < 399) {
       for (let i = 0; i < 3; i++) {
         weflares[i].status = true;
       }
-      this.computePercentage((persons - 45),99-45)
-    } else if (persons >= 99) {
+      this.computePercentage((persons - 199),399-199)
+    } else if (persons >= 399) {
       for (let i = 0; i < 4; i++) {
         weflares[i].status = true;
       }

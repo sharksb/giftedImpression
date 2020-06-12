@@ -1,0 +1,93 @@
+<!--pages/mylabel/mylabel.wxml-->
+
+<view class="title">
+  <text>{{item1.titles}}</text>
+  <view class="title_circle" wx:if="{{item1.count>0}}">{{item1.count}}</view>
+</view>
+<checkbox-group bindchange="checkboxChange1" class="mylabel_content">
+  <label wx:for="{{item1.items}}" wx:key="{{item.index}}">
+    <view class="mylabel_box {{item.checked?'checkedbox':''}}">
+      <checkbox value="{{item.value}}" checked="{{item.checked}}" hidden="true" />{{item.value}}
+    </view>
+  </label>
+</checkbox-group>
+
+<view class="title">
+  <text>{{item2.titles}}</text>
+  <view class="title_circle" wx:if="{{item2.count>0}}">{{item2.count}}</view>
+</view>
+<checkbox-group bindchange="checkboxChange2" class="mylabel_content">
+  <label wx:for="{{item2.items}}" wx:key="{{item.index}}">
+    <view class="mylabel_box {{item.checked?'checkedbox':''}}">
+      <checkbox value="{{item.value}}" checked="{{item.checked}}" hidden="true" />{{item.value}}
+    </view>
+  </label>
+</checkbox-group>
+
+<view class="title">
+  <text>{{item3.titles}}</text>
+  <view class="title_circle" wx:if="{{item3.count>0}}">{{item3.count}}</view>
+</view>
+<checkbox-group bindchange="checkboxChange3" class="mylabel_content">
+  <label wx:for="{{item3.items}}" wx:key="{{item.index}}">
+    <view class="mylabel_box {{item.checked?'checkedbox':''}}">
+      <checkbox value="{{item.value}}" checked="{{item.checked}}" hidden="true" />{{item.value}}
+    </view>
+  </label>
+</checkbox-group>
+
+<view class="title">
+  <text>{{item4.titles}}</text>
+  <view class="title_circle" wx:if="{{item4.count>0}}">{{item4.count}}</view>
+</view>
+<checkbox-group bindchange="checkboxChange4" class="mylabel_content">
+  <label wx:for="{{item4.items}}" wx:key="{{item.index}}">
+    <view class="mylabel_box {{item.checked?'checkedbox':''}}">
+      <checkbox value="{{item.value}}" checked="{{item.checked}}" hidden="true" />{{item.value}}
+    </view>
+  </label>
+</checkbox-group>
+
+<view class="title">
+  <text>{{item5.titles}}</text>
+  <view class="title_circle" wx:if="{{item5.count>0}}">{{item4.count}}</view>
+</view>
+<checkbox-group bindchange="checkboxChange5" class="mylabel_content">
+  <label wx:for="{{item5.items}}" wx:key="{{item.index}}">
+    <view class="mylabel_box {{item.checked?'checkedbox':''}}">
+      <checkbox value="{{item.value}}" checked="{{item.checked}}" hidden="true" />{{item.value}}
+    </view>
+  </label>
+</checkbox-group>
+
+
+<view class="title">
+  <text>{{item6.titles}}</text>
+  <view class="title_circle" wx:if="{{item6.count>0}}">{{item4.count}}</view>
+</view>
+<checkbox-group bindchange="checkboxChange6" class="mylabel_content">
+  <label wx:for="{{item6.items}}" wx:key="{{item.index}}">
+    <view class="mylabel_box {{item.checked?'checkedbox':''}}">
+      <checkbox value="{{item.value}}" checked="{{item.checked}}" hidden="true" />{{item.value}}
+    </view>
+  </label>
+</checkbox-group>
+
+<view>
+
+<!-- 已选 -->
+  <view class="selected">
+    <text class="selected_title">已选：</text>
+    <view class="selected_box">
+      <text wx:for="{{arrSelected1}}" class="selectedOpt">{{item}}</text>
+      <text wx:for="{{arrSelected2}}" class="selectedOpt">{{item}}</text>
+      <text wx:for="{{arrSelected3}}" class="selectedOpt">{{item}}</text>
+      <text wx:for="{{arrSelected4}}" class="selectedOpt">{{item}}</text>
+    </view>
+  </view>
+  
+  <button bindtap="clear">清除</button>
+  <button bindtap="confirm">
+    确认
+  </button>
+</view>

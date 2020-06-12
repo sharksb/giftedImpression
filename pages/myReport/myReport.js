@@ -38,16 +38,15 @@ var circleData = [
     factor: "好奇心宝宝",
     count: 10,
     evaluationCount: 7,
-    color: '',
   },
   {
     factor: "踏实稳重",
-    count: 10,
+    count: 33,
     evaluationCount: 6,
   },
   {
     factor: "争强好胜",
-    count: 10,
+    count: 47,
     evaluationCount: 6,
 
   },
@@ -69,38 +68,38 @@ var circleData = [
 var friedIImpress = [
   {
     span: "人格魅力",
-    subspan: "Charisma",
+    // subspan: "Charisma",
     xdatas: [5, 15, 20, 10, 10, 20],
     ydataFactor: ["衬衫衬衫衬衫", "羊毛衫羊毛衫", "雪纺衫雪纺衫", "裤子", "高跟鞋", "袜子"],
   },
   {
     span: "争强好胜",
-    subspan: "Charisma",
+    // subspan: "Charisma",
     xdatas: [18, 18, 5, 7, 7, 7],
     ydataFactor: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"],
   },
 
   {
     span: "争强好胜",
-    subspan: "Charisma",
+    // subspan: "Charisma",
     xdatas: [18, 18, 5, 7, 7, 7],
     ydataFactor: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"],
   },
   {
     span: "争强好胜",
-    subspan: "Charisma",
+    // subspan: "Charisma",
     xdatas: [18, 18, 5, 7, 7, 7],
     ydataFactor: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"],
   },
   {
     span: "争强好胜",
-    subspan: "Charisma",
+    // subspan: "Charisma",
     xdatas: [18, 18, 5, 7, 7, 7],
     ydataFactor: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"],
   },
   {
     span: "争强好胜",
-    subspan: "Charisma",
+    // subspan: "Charisma",
     xdatas: [18, 18, 5, 7, 7, 7],
     ydataFactor: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"],
   },
@@ -156,7 +155,7 @@ Page({
   data: {
 
     friendAvater: friendAvater,
-    pieData: [],
+    pieData: pieData,
     circleData: circleData,
     friedIImpress: friedIImpress,
     // 饼图
@@ -170,7 +169,7 @@ Page({
     },
 
     src2:'',
-    hasInfo:true
+    hasInfo:false
 
   },
 
@@ -184,20 +183,7 @@ Page({
     this.init_One(this.data.pieData, this.data.pieDataVal)
   },
 
-  init_one(barData, barDataVal) { //初始化第一个图表
-    this.oneComponent.init((canvas, width, height, dpr) => {
-      const chart = echarts.init(canvas, null, {
-        width: width,
-        height: height,
-        devicePixelRatio: dpr
-      });
-      barChart(chart, barData, barDataVal) //赋值给echart图表
-      this.chart = chart;
-      return chart;
-    });
-  },
-
-  init_One(pieData) { //初始化第一个图表
+  init_One(pieData, pieDataVal) { //初始化第一个图表
     this.OneComponent.init((canvas, width, height, dpr) => {
       const chart = echarts.init(canvas, null, {
         width: width,
@@ -209,27 +195,28 @@ Page({
       return chart;
     });
   },
-
   // 颜色设置
   changeColor() {
     let circleData = this.data.circleData;
     let friedIImpress = this.data.friedIImpress
-
+   
     let index = null
     let index1 = null
     for (index in circleData) {
       circleData[index].color = colors[index]
+      circleData[index].precetage = parseInt(circleData[index].evaluationCount / circleData[index].count*100) 
    
     }
     for (index1 in friedIImpress) {
       friedIImpress[index1].color = colors[index1]
+      friedIImpress[index1].id = 'mychart-dom-bar'+index1
     }
     
     this.setData({
       circleData: circleData,
       friedIImpress: friedIImpress
     })
-   
+    console.log(this.data.friedIImpress)
   },
 
   onLoad() {

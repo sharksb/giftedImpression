@@ -6,6 +6,5 @@
         <text>{{item.title}}</text>
       </view>
       <button type="plain" bindtap="obtainWalfare">一键获取</button>
-      <image src='data:image/png;base64,{{src2}}'></image>
    </view>
 </view>

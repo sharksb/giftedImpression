@@ -145,6 +145,27 @@
 					"id": -1,
 					"name": "sharePage",
 					"pathName": "pages/sharePage/sharePage",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/yctalent/yctalent",
+					"pathName": "pages/yctalent/yctalent",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mylabel/mylabel",
+					"pathName": "pages/mylabel/mylabel",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/guanjianci/guanjianci",
+					"pathName": "pages/guanjianci/guanjianci",
 					"scene": null
 				}
 			]

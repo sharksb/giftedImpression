@@ -1,0 +1,8 @@
+<!--components/checkbox/checkbox.wxml-->
+<checkbox-group bindchange="checkboxChange" class="mylabel_content">
+  <label  wx:for="{{items}}" wx:key="{{item.value}}">
+   <view class="mylabel_box {{item.checked?'checkedbox':''}}"> 
+   <checkbox value="{{item.value}}" checked="{{item.checked}}" hidden="true"/>{{item.value}}
+   </view>
+  </label>
+</checkbox-group>

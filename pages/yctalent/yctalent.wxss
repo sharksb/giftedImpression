@@ -1,0 +1,113 @@
+/* pages/yctalent/yctalent.wxss */
+
+page {
+  background-color: #24b9d1;
+}
+
+.first {
+  text-align: center;
+}
+
+.talentTitle {
+  color: rgba(252, 250, 250, 1);
+  font-size: 36px;
+  font-family: 方正工业黑-标准;
+  margin-top: 220rpx;
+}
+
+.talentSubTitle {
+  font-size: 26rpx;
+  color: #fefefe;
+  margin-top: 30rpx;
+}
+
+.talentMiddleTitle {
+  font-size: 40rpx;
+  color: #ffde59;
+  margin-top: 92rpx;
+}
+
+.talentMiddleSubTitle {
+  font-size: 28rpx;
+  color: #fefefe;
+}
+
+.second {
+  color: #fefefe;
+}
+
+.second_title {
+  font-size: 32rpx;
+  margin-top: 78rpx;
+  text-align: center;
+}
+
+.second_notice {
+  font-size: 24rpx;
+  margin-top: 26rpx;
+  text-align: center;
+}
+
+.second_button {
+  width: 60%;
+  margin: 0 auto 90rpx;
+  height: 72rpx;
+  line-height: 72rpx;
+  font-size: 28rpx;
+  background-color: #f3d43a;
+  border-radius: 38rpx;
+}
+
+.afterApply {
+  width: 55%;
+  height: 122rpx;
+  line-height: 122rpx;
+  font-size: 32rpx;
+  border-radius: 50rpx;
+  background-color: #f3d43a;
+  margin: 90rpx auto;
+}
+
+
+.uploadBut .van-button__text {
+  color: #101010;
+}
+
+.uploadBut .van-button__icon {
+  color: #101010;
+}
+
+.second_imgage {
+  width: 80%;
+  margin: 60rpx auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.second_upload {
+  width: 40%
+}
+
+.second_showimage {
+  width: 55%;
+  display: flex;
+  justify-content: space-between;
+}
+.second_showimage image {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.second_upload button {
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 28rpx;
+  display: block;
+}
+
+.secondupload_text {
+  font-size: 28rpx;
+  color: #666;
+  margin-top: 10rpx;
+}
+

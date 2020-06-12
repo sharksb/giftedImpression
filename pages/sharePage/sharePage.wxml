@@ -20,7 +20,7 @@
   <view class="third_box">
     <view class="third_title">已邀
       <text>{{personInfo.friedboost}}</text>人助力，仅差{{unprogress}}% 免费领</view>
-    <van-progress percentage="{{progress*100}}" stroke-width="18" show-pivot="{{false}}" />
+    <van-progress percentage="{{progress*100}}" stroke-width="18" show-pivot="{{false}}" color="#FC3333"/>
     <van-button class="third_button">为好友评价，助力求职礼包</van-button>
     <text class="third_note">为好友点评五个印象，助力他获得更好求职机会</text>
   </view>
@@ -55,4 +55,16 @@
 
     </view>
   </block>
+</view>
+
+<!-- sixth -->
+<view class="sixth_box">
+<view class="notice_box">
+<van-notice-bar text="{{notice}}" color="#1b1b1b" backgroundColor="#F3D43A">
+  <view slot="left-icon" class="sixthbox_notice">
+  <image src="../../assets/person/person.png"></image>
+  </view>
+</van-notice-bar>
+</view>
+<van-button class="free_button">免费开通报告</van-button>
 </view>

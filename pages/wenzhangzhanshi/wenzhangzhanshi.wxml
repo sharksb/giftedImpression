@@ -1,0 +1,36 @@
+<view id="container">
+      <view id="articleTitle">优才印象网络平台上线啦！</view>
+  <view>
+      <text id="articleGZH"> 优才印象上线了</text>
+      <text id="articleTime">2020-4-27</text>
+  </view>
+  <view id="articleBox">
+       <view class="articleYC">优才印象</view>
+       <view class="articleYC">QUALITY IMPRESSION</view>
+       <view id="articleRG">如果你对你的专业就业方向不太理解 请联系我们</view>
+  </view>
+  <view id="articleContent">
+    <view>优才印象网络平台上线啦！</view>
+    <view class="articleMargin-30">即日起</view>
+    <view class="articleMargin-30">你可以通过此平台进行制造属于自己的简历</view>
+    <view class="articleMargin-30">使用此平台时需要注意</view>
+    <view class="articleMargin-30">须知</view>
+    <view class="articleMargin-20">01</view>
+    <view class="articleMargin-20"><text class="articleWhite">白色</text>本平台仅受理学生在校学习、生活中遇到各种问题及建议。就业问题请在此平台编辑并提交。</view>
+    <view class="articleMargin-20">02</view>
+    <view class="articleMargin-20"><text class="articleWhite">白色</text>我们将严格遵守保密制度，切记保护投诉人的合法利益，严肃处罚打击报复投诉人的行为。</view>
+    <view class="articleMargin-20">03</view>
+    <view class="articleMargin-20"><text class="articleWhite">白色</text>投诉人应该实事求是地反映问题。对利用投诉捏造事实，进行陷害的，依照有关规定严肃处理</view>
+    <view class="articleMargin-20">04</view>
+    <view class="articleMargin-20"><text class="articleWhite">白色</text>问题会定期反馈到对应的部门处理，提交后请耐心的等待结果，长时间未处理或处理不满意的，可以通过此平台再次提交</view>
+    <view class="articleMargin-20">使用方法</view>
+    <view class="articleMargin-20">01</view>
+    <view class="articleMargin-20"><text class="articleWhite">白色</text>进入公众号，点击右下角“办事大厅”按钮进入系统。</view>
+    <view class="articleMargin-20">02</view>
+    <view class="articleMargin-20"><text class="articleWhite">白色</text>第一次使用，需要身份证认证，18级新生使用姓名+身份证+考生号形式，18级之前的学生请使用姓名+身份证+身份证的形式。</view>
+    <view class="articleMargin-20">03</view>
+    <view class="articleMargin-20"><text class="articleWhite">白色</text>进入系统后，点击下方“应用”，找到投诉建议，点击今日反馈提交你的问题，可以上传图片。</view>
+    <view class="articleMargin-20">04</view>
+    <view class="articleMargin-20"><text class="articleWhite">白色</text>可通过“投诉建议”内右上角“我的反馈”功能跟踪问题的处理进度，并对办理完结的问题进行评价。</view>  
+    </view>
+</view>
